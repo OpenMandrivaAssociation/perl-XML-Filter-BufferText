@@ -16,6 +16,7 @@ Buildrequires:  perl-devel
 %endif
 Buildrequires:  perl(XML::SAX)
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This is a very simple filter. One common cause of grief (and programmer error)
