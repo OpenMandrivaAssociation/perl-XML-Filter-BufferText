@@ -1,7 +1,7 @@
 %define module  XML-Filter-BufferText
 %define name    perl-%{module}
 %define version 1.01
-%define release %mkrel 9
+%define release %mkrel 10
 
 Name:           %{name}
 Version:        %{version}
