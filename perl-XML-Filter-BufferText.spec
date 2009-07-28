@@ -1,22 +1,22 @@
-%define module  XML-Filter-BufferText
-%define name    perl-%{module}
-%define version 1.01
-%define release %mkrel 10
+%define upstream_name    XML-Filter-BufferText
+%define upstream_version 1.01
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           perl-%{upstream_name}
+Version:        %perl_convert_version %{upstream_version}
+Release:        %mkrel 1
+
 Summary:        Filter to put all characters() in one event
 License:        Artistic
 Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}/
-Source:         http://www.cpan.org/modules/by-module/XML/%{module}-%{version}.tar.bz2
+Url:            http://search.cpan.org/dist/%{upstream_name}/
+Source0:        http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 Buildrequires:  perl-devel
 %endif
 Buildrequires:  perl(XML::SAX)
-BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This is a very simple filter. One common cause of grief (and programmer error)
@@ -25,7 +25,7 @@ They can, but are not forced to, and most don't. This filter does the trivial
 but oft-repeated task of putting all characters into a single event.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 644 BufferText.pm Changes README
 
 %build
@@ -42,10 +42,8 @@ rm -rf %{buildroot}
 %clean 
 rm -rf %{buildroot}
 
-
 %files
 %defattr(-,root,root)
 %doc Changes README
 %{perl_vendorlib}/XML
 %{_mandir}/*/*
-
