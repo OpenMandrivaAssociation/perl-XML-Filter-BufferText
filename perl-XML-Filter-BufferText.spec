@@ -4,7 +4,7 @@
 Summary:	Filter to put all characters() in one event
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	15
+Release:	16
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
