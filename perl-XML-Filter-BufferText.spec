@@ -3,12 +3,12 @@
 
 Summary:	Filter to put all characters() in one event
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	21
+Version:	%{modver}
+Release:	22
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}/
-Source0:	http://www.cpan.org/modules/by-module/XML/%{modname}-%{modver}.tar.bz2
+Url:		https://metacpan.org/dist/XML-Filter-BufferText
+Source0:	https://cpan.metacpan.org/authors/id/R/RB/RBERJON/XML-Filter-BufferText-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
